@@ -135,12 +135,12 @@ dialog h3{margin-bottom:12px}
     <div class="head"><h1>Create Exam</h1><p>Har sawal ke saath sahi jawab aur marks likhein. AI students ki sheets inhi jawabat se check karega.</p></div>
     <div class="panel">
       <label for="title">Exam Name</label>
-      <input id="title" placeholder="masalan: Database Systems Midterm">
+      <input id="title" placeholder="e.g.: Database Systems Midterm">
       <label for="qs">Questions</label>
-      <p class="hint">Har line mein ek sawal, is tarah: <code>sawal | sahi jawab | marks</code></p>
+             <p class="hint">One question per line, like this: <code>question | correct answer | marks</code></p>
       <textarea id="qs" placeholder="Normalization kya hai? | Data ki redundancy kam karne ka tareeqa | 5&#10;Primary key kya hai? | Har row ki unique pehchan | 3"></textarea>
       <div class="preview-list" id="qprev"></div>
-      <div class="row"><button class="btn" onclick="createExam()">Exam save karein</button><span class="muted" id="qtot"></span></div>
+      <div class="row"><button class="btn" onclick="createExam()">Exam save karein save Exam </button><span class="muted" id="qtot"></span></div>
       <p id="examMsg" class="msg" role="status"></p>
     </div>
   </section>
