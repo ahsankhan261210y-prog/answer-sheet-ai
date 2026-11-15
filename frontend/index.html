@@ -136,7 +136,7 @@ dialog h3{margin-bottom:12px}
     <div class="panel">
       <label for="title">Exam Name</label>
       <input id="title" placeholder="masalan: Database Systems Midterm">
-      <label for="qs">Sawalat</label>
+      <label for="qs">Questions</label>
       <p class="hint">Har line mein ek sawal, is tarah: <code>sawal | sahi jawab | marks</code></p>
       <textarea id="qs" placeholder="Normalization kya hai? | Data ki redundancy kam karne ka tareeqa | 5&#10;Primary key kya hai? | Har row ki unique pehchan | 3"></textarea>
       <div class="preview-list" id="qprev"></div>
@@ -203,7 +203,7 @@ $("qs").oninput=()=>{
 };
 async function createExam(){
   const questions=parseQs();
-  if(!$("title").value.trim()||!questions.length)return say("examMsg","Exam Name aur durust sawalat zaroori hain.","err");
+  if(!$("title").value.trim()||!questions.length)return say("examMsg","Exam Name aur durust Questions zaroori hain.","err");
   const r=await fetch("/api/exams",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({title:$("title").value,questions})});
   if(r.ok){say("examMsg","Exam save ho gaya.","ok");$("title").value="";$("qs").value="";$("qs").oninput()}
   else say("examMsg","Exam save nahi hua.","err");
