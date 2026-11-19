@@ -152,10 +152,10 @@ dialog h3{margin-bottom:12px}
         <div><label for="examSel">Exam</label><select id="examSel"></select></div>
         <div><label for="student">Student Name</label><input id="student"></div>
       </div>
-      <label>JPG or PNG</label>
+      <label>Answer sheet photo (JPG/PNG)</label>
       <div class="drop" id="drop" tabindex="0"><strong id="dropT">Tasveer yahan chhorein ya click karein</strong><p>JPG ya PNG</p><img id="pv" hidden alt="Sheet ki jhalak"></div>
       <input type="file" id="file" accept="image/*" hidden>
-      <button class="btn" id="subBtn" onclick="submitSheet()">Abhi check karein</button>
+      <button class="btn" id="subBtn" onclick="submitSheet()">Check Now</button>
       <p id="subMsg" class="msg" role="status"></p>
     </div>
     <div id="subOut"></div>
@@ -239,7 +239,7 @@ async function submitSheet(){
       <details><summary>Sheet se nikala gaya text</summary><pre>${esc(d.extracted_text)}</pre></details></div>`;
     $("subOut").scrollIntoView({behavior:"smooth"});
   }catch(e){say("subMsg","Server se rabta nahi hua.","err")}
-  finally{b.disabled=false;b.textContent="Abhi check karein"}
+  finally{b.disabled=false;b.textContent="Check Now"}
 }
 
 /* result view */
