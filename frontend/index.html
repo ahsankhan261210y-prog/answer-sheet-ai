@@ -162,16 +162,15 @@ dialog h3{margin-bottom:12px}
   </section>
 
   <section id="results">
-    <div class="head"><h1>Nateeje / Recheck</h1><p>Kisi bhi sheet ki tafseel dekhein, dobara check karwayein, ya apne aakhri marks khud likhein.</p></div>
+      <div class="head"><h1>Results / Recheck</h1><p>View the details of any sheet, request a recheck, or enter the final marks yourself.</p></div>
     <div id="list"></div>
   </section>
 </main>
 
 <dialog id="dlg">
-  <h3>Aakhri marks likhein</h3>
+  <h3>Aakhri   <h3>Enter final marks</h3>
   <input type="number" id="ovVal" step="0.5" min="0">
-  <div class="row"><button class="btn" id="ovOk">Save karein</button><button class="btn ghost" id="ovNo">Cancel</button></div>
-</dialog>
+    <div class="row"><button class="btn" id="ovOk">Save</button><button class="btn ghost" id="ovNo">Cancel</button></div>
 
 <script>
 const $=id=>document.getElementById(id);
