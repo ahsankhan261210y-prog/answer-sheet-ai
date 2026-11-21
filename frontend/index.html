@@ -177,8 +177,8 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmt=n=>Number.isInteger(+n)?+n:(+n).toFixed(1);
 const parse=v=>{if(typeof v==="string"){try{return JSON.parse(v)}catch{return null}}return v};
-const STATUS={graded:"Check ho gaya",rechecked:"Recheck hua",teacher_override:"Teacher override"};
 const STATUS={graded:"Checked",rechecked:"Rechecked",teacher_override:"Teacher override"};
+function say(id,t,cls){const e=$(id);e.textContent=t;e.className="msg"+(cls?" "+cls:"")}
 
 /* tabs */
 function tab(t){
